@@ -25,7 +25,7 @@ public class Task2 {
         List<String> postsIds = getAllMatches(allPosts);
         int lastPostId = getLastPostId(postsIds);
         String allComments = getAllCommentsByPostId(lastPostId);
-        String jsonFilePath = "src/main/resources/" + "user-" + userId + "-post-" + lastPostId + "-comments.json";
+        String jsonFilePath = "user-" + userId + "-post-" + lastPostId + "-comments.json";
         createJsonWithComments(allComments, jsonFilePath);
         System.out.println("JSON filepath: " + jsonFilePath);
     }

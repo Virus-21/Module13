@@ -24,7 +24,7 @@ public class Task3 {
     public void createJsonWithAllOpenToDosByUserId(int userId) throws IOException, InterruptedException {
         String allTodosJson = getAllTodosByUserId(userId);
         List<ToDosJPH> allTodos = getOpenTodosFromJson(allTodosJson);
-        String jsonFilePath = "src/main/resources/" + "user-" + userId + "-open_todos.json";
+        String jsonFilePath = "user-" + userId + "-open_todos.json";
         createJsonWithTodos(allTodos, jsonFilePath);
         System.out.println("JSON filepath: " + jsonFilePath);
     }
